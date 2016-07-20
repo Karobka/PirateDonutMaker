@@ -49,10 +49,24 @@ $(document).ready(function() {
 	 * if AYE add 
 	 */
 
-	/** begin event listener */
+
+
+	/** begining button click event listener */
 	$(".btn-begin").on('click', function() {
 		$(".intro-words").hide();
-		$(".form-controls").show();
+		$(".prefs-form").show();
+	});
+
+	/** form submit listener */
+	$(".prefs-form").submit(function(event) {
+		event.preventDefault();
+		if($("#fruitfrost-aye").prop("checked")) {
+			alert("fruit aye was checked");
+		}else if ($("#fruitfrost-nay").prop("checked")) {
+			alert("they chose no fruity");
+		}else {
+			alert("blah nothing is checked");
+		}
 	});
 
 
@@ -83,7 +97,7 @@ $(document).ready(function() {
 
 	/** questions array */
     var questions = [
-        "Would ye fancy some smooth frosting on top?",
+        "Would ye fancy some fruity frosting on top?",
         "Are ye hankerin' for something crunchy sprinkled on top?",
         "Do ye want it with some kind of filling in its belly?",
         "Are ye a scurvy dog who likes yer donuts dense like fog?",
