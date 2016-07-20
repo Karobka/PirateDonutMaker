@@ -39,9 +39,19 @@
  * 
  */
 
+	/** pantry object */
+	var pantry = {
+		fruitfrostings: ["fruity strawberry frosting", "fresh raspberry frosting", "yellow banana frosting"],
+		smoothfrostings: ["rich chocolate frosting", "smooth maple flavored frosting", "a combination of maple and chocolate frosting"],
+		glazedfrostings: ["a light glazing", "a medium glazing", "a heavy glaze"],
+		crunchytoppings: [],
+		saltytoppings: [],
+		fruitytoppings: [],
+		fruityfillings: [],
+		cremefillings: []
+	}
 
-	/** preferences constructor */
-	/**if the user answers yes to a question add something here */
+	/** preferences object- keeps track of user choices - null changes to true or false */
 	var userPrefs = {
 		fruitfrostings: null,
 		smoothfrostings: null,
@@ -53,16 +63,9 @@
 		cremefillings: null
 	}
 
+var	personalizedPirateDonut = [];
+
 $(document).ready(function() {
-    
-	/**On clicking 'begin' append first question
-	 * 
-	 * event listener for clicking on AYE or NAY.
-	 * 
-	 * if AYE add 
-	 */
-
-
 
 	/** begining button click event listener */
 	$(".btn-begin").on('click', function() {
@@ -77,24 +80,29 @@ $(document).ready(function() {
 			alert("fruit aye was checked");
 			userPrefs.fruitfrostings = true;
 		}else if ($("#fruitfrost-nay").prop("checked")) {
-			alert("they chose no fruity");
+			alert("they chose no fruit");
 			userPrefs.fruitfrostings = false;
 		}else {
 			alert("blah nothing is checked");
 		}
+		// create donut
+		personalizingPirateDonut();
+		//reveal final donut
+		alert(personalizedPirateDonut);
 	});
 
-	/** pantry object */
-	var pantry = {
-		fruitfrostings: ["fruity strawberry frosting", "fresh raspberry frosting", "yellow banana frosting"],
-		smoothfrostings: ["rich chocolate frosting", "smooth maple flavored frosting", "a combination of maple and chocolate frosting"],
-		glazedfrostings: ["a light glazing", "a medium glazing", "a heavy glaze"],
-		crunchytoppings: [],
-		saltytoppings: [],
-		fruitytoppings: [],
-		fruityfillings: [],
-		cremefillings: []
-	}
+	function personalizingPirateDonut() {
+		
+		for (var key in userPrefs){
+			var random = Math.floor(Math.random() * pantry [key].length -1) + 1;
+			personalizedPirateDonut.push(pantry[key][random]);
+		}
+		return personalizedPirateDonut;
+	};
+
+
+
+
 
 
 
