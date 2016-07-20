@@ -1,3 +1,7 @@
 body {
     
 }
+
+.form-controls {
+    display: none;
+}
