@@ -40,6 +40,19 @@
  */
 
 
+	/** preferences constructor */
+	/**if the user answers yes to a question add something here */
+	var userPrefs = {
+		fruitfrostings: null,
+		smoothfrostings: null,
+		glazedfrostings: null,
+		crunchytoppings: null,
+		saltytoppings: null,
+		fruitytoppings: null,
+		fruityfillings: null,
+		cremefillings: null
+	}
+
 $(document).ready(function() {
     
 	/**On clicking 'begin' append first question
@@ -62,14 +75,16 @@ $(document).ready(function() {
 		event.preventDefault();
 		if($("#fruitfrost-aye").prop("checked")) {
 			alert("fruit aye was checked");
+			userPrefs.fruitfrostings = true;
 		}else if ($("#fruitfrost-nay").prop("checked")) {
 			alert("they chose no fruity");
+			userPrefs.fruitfrostings = false;
 		}else {
 			alert("blah nothing is checked");
 		}
 	});
 
-
+	/** pantry object */
 	var pantry = {
 		fruitfrostings: ["fruity strawberry frosting", "fresh raspberry frosting", "yellow banana frosting"],
 		smoothfrostings: ["rich chocolate frosting", "smooth maple flavored frosting", "a combination of maple and chocolate frosting"],
@@ -85,17 +100,17 @@ $(document).ready(function() {
 
 
 
+
 	/** The DonutMaker constructor */
 	/** take preferences and select from matching pantry category a random ingredient */
 	var DonutMaker = function(frosting,toppings,filling,dough,ratsample) {
 		this.frosting = frosting;
 	}
 
-	/** preferences constructor */
-	/**if the user answers yes to a question add something here */
 
 
-	/** questions array */
+
+	/** questions */
     var questions = [
         "Would ye fancy some fruity frosting on top?",
         "Are ye hankerin' for something crunchy sprinkled on top?",
