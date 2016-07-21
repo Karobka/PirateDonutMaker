@@ -44,23 +44,15 @@
 		fruitfrostings: ["fruity strawberry frosting", "fresh raspberry frosting", "yellow banana frosting"],
 		smoothfrostings: ["rich chocolate frosting", "smooth maple flavored frosting", "a combination of maple and chocolate frosting"],
 		glazedfrostings: ["a light glazing", "a medium glazing", "a heavy glaze"],
-		crunchytoppings: [],
-		saltytoppings: [],
-		fruitytoppings: [],
-		fruityfillings: [],
-		cremefillings: []
+		crunchytoppings: ["a sprinkling of sugar on top", "a heaping of nuts on the top", "a pile of shredded coconut on top"],
+		saltytoppings: ["a pile of crumbling bacon on the top", "a pile of pork rinds on top", "a sprinkling of sea salt to top it off"],
+		fruitytoppings: ["topped with a single cherry", "topped with a juicy strawberry", "topped with three juicy raspberries"],
+		fruityfillings: ["filled to bursting with strawberry filling", "filled with the most delicious raspberry filling"],
+		cremefillings: ["with a belly full of rich chocolate creme", "with a belly full of smooth vanilla creme", "with the most delicious strawberry creme in the center"]
 	}
 
-	/** preferences object- keeps track of user choices - null changes to true or false */
+	/** preferences object- keeps track of user radio button choices  */
 	var userPrefs = {
-		fruitfrostings: null,
-		smoothfrostings: null,
-		glazedfrostings: null,
-		crunchytoppings: null,
-		saltytoppings: null,
-		fruitytoppings: null,
-		fruityfillings: null,
-		cremefillings: null
 	}
 
 var	personalizedPirateDonut = [];
@@ -76,21 +68,41 @@ $(document).ready(function() {
 	/** form submit listener */
 	$(".prefs-form").submit(function(event) {
 		event.preventDefault();
+		//create new empty userPrefs object
+		userPrefs = {};
+		//create new empty donut object
+		personalizedPirateDonut = [];
+		//check only for checked radio buttons and add to prefs
 		if($("#fruitfrost-aye").prop("checked")) {
-			alert("fruit aye was checked");
 			userPrefs.fruitfrostings = true;
-		}else if ($("#fruitfrost-nay").prop("checked")) {
-			alert("they chose no fruit");
-			userPrefs.fruitfrostings = false;
-		}else {
-			alert("blah nothing is checked");
+		}
+		if ($("#smoothfrost-aye").prop("checked")) {
+			userPrefs.smoothfrostings = true;
+		}
+		if ($("#glazefrost-aye").prop("checked")) {
+			userPrefs.glazedfrostings = true;
+		}
+		if ($("#crunchytop-aye").prop("checked")) {
+			userPrefs.crunchytoppings = true;
+		}
+		if ($("#saltytop-aye").prop("checked")) {
+			userPrefs.saltytoppings = true;
+		}
+		if ($("#fruittop-aye").prop("checked")) {
+			userPrefs.fruitytoppings = true;
+		}
+		if ($("#fruitfilling-aye").prop("checked")) {
+			userPrefs.fruityfillings = true;
+		}
+		if ($("#cremefill-aye").prop("checked")) {
+			userPrefs.cremefillings = true;
 		}
 		// create donut
 		personalizingPirateDonut();
 		//reveal final donut
 		alert(personalizedPirateDonut);
 	});
-
+	//get ingredients according to data in prefs
 	function personalizingPirateDonut() {
 		
 		for (var key in userPrefs){
@@ -100,33 +112,6 @@ $(document).ready(function() {
 		return personalizedPirateDonut;
 	};
 
-
-
-
-
-
-
-
-
-
-	/** The DonutMaker constructor */
-	/** take preferences and select from matching pantry category a random ingredient */
-	var DonutMaker = function(frosting,toppings,filling,dough,ratsample) {
-		this.frosting = frosting;
-	}
-
-
-
-
-	/** questions */
-    var questions = [
-        "Would ye fancy some fruity frosting on top?",
-        "Are ye hankerin' for something crunchy sprinkled on top?",
-        "Do ye want it with some kind of filling in its belly?",
-        "Are ye a scurvy dog who likes yer donuts dense like fog?",
-        "Would it be agreeable to ya if I let the bilge rats have a little taste of your creation?"
-        //question6 = {text:"How about a " + pantryItem + "fer yer gutt today?"}
-    ];
 
 
 
