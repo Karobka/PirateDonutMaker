@@ -104,6 +104,7 @@ $(document).ready(function() {
 		personalizingPirateDonut();
 		//reveal final donut
 		$(".prefs-form").hide();
+		$(".donut-result").show();
 		$(".donut-display").text(
 			"Avast!  Here be yer authentic pirate donut with " + personalizedPirateDonut + "."
 		)

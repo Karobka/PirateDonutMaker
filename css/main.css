@@ -71,4 +71,11 @@ button {
     text-align: center;
 }
 
+.donut-result {
+    display: none;
+    background-color: rgba(12,85,58,0.5);
+    border: 1px solid #0c553a;
+    text-align: center;
+}
+
 
