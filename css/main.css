@@ -3,6 +3,9 @@
 	font-family: 'Karla', sans-serif;
     color: #dedede;
 }
+.title-line {
+    margin-top: 25px;
+}
 
 body {
     background-color: #072c38;
