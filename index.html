@@ -7,9 +7,9 @@
             <title>PirateDonutMaker</title>
         </head>
         <body>
-            <div>
+            <div class="containment">
                 <h1>Ye Old Pirate Donut Maker</h1>
-                <section>
+                <section class="dark-containment">
                     <div class="intro-words">
                         <p>This be a Pirate Donut making site!</p>
                         <button type="submit" class="btn-begin">Click to Begin</button>
@@ -18,79 +18,80 @@
                     <form name="donutform" class="prefs-form">
                         <p>Would ye fancy some fruity frosting on top?</p>
                         <label>
-                            <input type="radio" name="options1" id="fruitfrost-aye" value="aye">
-                            AYE!
+                            <input type="radio" name="options1" id="fruitfrost-aye" value="aye" required>
+                            Aye
                         </label>
                         <label>
                             <input type="radio" name="options1" id="fruitfrost-nay" value="nay">
-                            NAY! Ye scurvy dog!
+                            Nay
                         </label>
                         <p>Would ye fancy a smooth frosting on top?</p>
                         <label>
-                            <input type="radio" name="options2" id="smoothfrost-aye" value="aye">
-                            AYE!
+                            <input type="radio" name="options2" id="smoothfrost-aye" value="aye" required>
+                            Aye
                         </label>
                         <label>
                             <input type="radio" name="options2" id="smoothfrost-nay" value="nay">
-                            NAY! Ye scurvy dog!
+                            Nay
                         </label>
                         <p>Would ye prefer a simple rich glaze on it?</p>
                         <label>
-                            <input type="radio" name="options3" id="glazefrost-aye" value="aye">
-                            AYE!
+                            <input type="radio" name="options3" id="glazefrost-aye" value="aye" required>
+                            Aye
                         </label>
                         <label>
                             <input type="radio" name="options3" id="glazefrost-nay" value="nay">
-                            NAY!
+                            Nay
                         </label>
                         <p>Are ye a pirate who likes crunchy things on top of yer donut?</p>
                         <label>
-                            <input type="radio" name="options4" id="crunchytop-aye" value="aye">
-                            AYE!
+                            <input type="radio" name="options4" id="crunchytop-aye" value="aye" required>
+                            Aye
                         </label>
                         <label>
                             <input type="radio" name="options4" id="crunchytop-nay" value="nay">
-                            NAY! Ye scurvy dog!
+                            Nay
                         </label>
                         <p>Do ye like a bit o'saltiness on top of yer donut?</p>
                         <label>
-                            <input type="radio" name="options5" id="saltytop-aye" value="aye">
-                            AYE!
+                            <input type="radio" name="options5" id="saltytop-aye" value="aye" required>
+                            Aye
                         </label>
                         <label>
                             <input type="radio" name="options5" id="saltytop-nay" value="nay">
-                            NAY! Ye scurvy dog!
+                            Nay
                         </label>
                         <p>Do ye like fruity things on the top of a donut?</p>
                         <label>
-                            <input type="radio" name="options6" id="fruittop-aye" value="aye">
-                            AYE!
+                            <input type="radio" name="options6" id="fruittop-aye" value="aye" required>
+                            Aye
                         </label>
                         <label>
                             <input type="radio" name="options6" id="fruittop-nay" value="nay">
-                            NAY! Ye scurvy dog!
+                            Nay
                         </label>
                         <p>Do ye fancy a donut with fruit filling in its belly?</p>
                         <label>
-                            <input type="radio" name="options7" id="fruitfilling-aye" value="aye">
-                            AYE!
+                            <input type="radio" name="options7" id="fruitfilling-aye" value="aye" required>
+                            Aye
                         </label>
                         <label>
                             <input type="radio" name="options7" id="fruitfilling-nay" value="nay">
-                            NAY! Ye scurvy dog!
+                            Nay
                         </label>
-                        <p>What about a creme filling for the inards?</p>
+                        <p>What about a crème filling for the inards?</p>
                         <label>
-                            <input type="radio" name="options8" id="cremefill-aye" value="aye">
-                            AYE!
+                            <input type="radio" name="options8" id="cremefill-aye" value="aye" required>
+                            Aye
                         </label>
                         <label>
                             <input type="radio" name="options8" id="cremefill-nay" value="nay">
-                            NAY! Ye scurvy dog!
+                            Nay
                         </label>
                         <button type="submit" id="btn-make">Get me donut!</button>
                     </form>
                 </section>
+                <p class="donut-display"></p>
             </div>
 
 

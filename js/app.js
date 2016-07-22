@@ -41,14 +41,14 @@
 
 	/** pantry object */
 	var pantry = {
-		fruitfrostings: ["fruity strawberry frosting", "fresh raspberry frosting", "yellow banana frosting"],
-		smoothfrostings: ["rich chocolate frosting", "smooth maple flavored frosting", "a combination of maple and chocolate frosting"],
-		glazedfrostings: ["a light glazing", "a medium glazing", "a heavy glaze"],
-		crunchytoppings: ["a sprinkling of sugar on top", "a heaping of nuts on the top", "a pile of shredded coconut on top"],
-		saltytoppings: ["a pile of crumbling bacon on the top", "a pile of pork rinds on top", "a sprinkling of sea salt to top it off"],
-		fruitytoppings: ["topped with a single cherry", "topped with a juicy strawberry", "topped with three juicy raspberries"],
-		fruityfillings: ["filled to bursting with strawberry filling", "filled with the most delicious raspberry filling"],
-		cremefillings: ["with a belly full of rich chocolate creme", "with a belly full of smooth vanilla creme", "with the most delicious strawberry creme in the center"]
+		fruitfrostings: [" fruity strawberry frosting", " fresh raspberry frosting", " yellow banana frosting"],
+		smoothfrostings: [" rich chocolate frosting", " smooth maple flavored frosting", " a combination of maple and chocolate frosting"],
+		glazedfrostings: [" a light glazing", " a medium glazing", " a heavy glaze"],
+		crunchytoppings: [" a sprinkling of sugar on top", " a heaping of nuts on the top", " a pile of shredded coconut on top"],
+		saltytoppings: [" a  pile of crumbling bacon on the top", " a pile of pork rinds on top", " a sprinkling of sea salt to top it off"],
+		fruitytoppings: [" topped with a single cherry", " topped with a juicy strawberry", " topped with three juicy raspberries"],
+		fruityfillings: [" filled to bursting with a strawberry filling", " filled with the most delicious raspberry filling", " filled to the brim with a banana filling"],
+		cremefillings: [" and with a belly full of rich chocolate crème", " and with a belly full of smooth vanilla crème", " and with the most delicious strawberry crème in the center"]
 	}
 
 	/** preferences object- keeps track of user radio button choices  */
@@ -72,7 +72,7 @@ $(document).ready(function() {
 		userPrefs = {};
 		//create new empty donut object
 		personalizedPirateDonut = [];
-		//check only for checked radio buttons and add to prefs
+		//check only for checked radio buttons and add them to prefs
 		if($("#fruitfrost-aye").prop("checked")) {
 			userPrefs.fruitfrostings = true;
 		}
@@ -100,7 +100,10 @@ $(document).ready(function() {
 		// create donut
 		personalizingPirateDonut();
 		//reveal final donut
-		alert(personalizedPirateDonut);
+		$(".prefs-form").hide();
+		$(".donut-display").text(
+			"Avast!  Here be yer authentic pirate donut with " + personalizedPirateDonut + "."
+		)
 	});
 	//get ingredients according to data in prefs
 	function personalizingPirateDonut() {

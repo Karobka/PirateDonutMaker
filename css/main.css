@@ -1,7 +1,56 @@
 body {
-    
+    background-image: url("../images/ocean.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .prefs-form {
     display: none;
 }
+/** REMEMBER MOBILE FIRST  **/
+
+.containment {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 600px) {
+    html {
+        height: 100%;
+    }
+    body {
+        /** backup background color if gradient isn't supported**/
+        background-color: #257fa6;
+        height: 100%;
+        margin: 0;
+        background-attachment: fixed;
+        background: linear-gradient(#257fa6, #092c44);
+        background-repeat: none;
+    }
+    #btn-make {
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+button {
+    padding: 5px 5px;
+    border: 1px solid black;
+}
+
+button {
+    display: block;
+    margin-top: 25px;
+}
+
+.dark-containment {
+    border: 1px solid darkgrey;
+    background-color: rgba(0,0,0,0.5);
+}
+
+
