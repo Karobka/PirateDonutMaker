@@ -61,6 +61,9 @@ $(document).ready(function() {
 
 	/** begining button click event listener */
 	$(".btn-begin").on('click', function() {
+		$(".dark-containment").animate({
+        	height: '712px'
+    	}, 1000);
 		$(".intro-words").hide();
 		$(".prefs-form").show();
 	});

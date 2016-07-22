@@ -1,12 +1,22 @@
-body {
-    background-image: url("../images/ocean.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
+* {
+    box-sizing: border-box;
+	font-family: 'Karla', sans-serif;
+    color: #dedede;
 }
 
+body {
+    background-color: #072c38;
+    background-image: url("../images/ocean.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+/** set form to not display at first **/
 .prefs-form {
     display: none;
 }
+
 /** REMEMBER MOBILE FIRST  **/
 
 .containment {
@@ -27,10 +37,6 @@ body {
         background: linear-gradient(#257fa6, #092c44);
         background-repeat: none;
     }
-    #btn-make {
-    margin-left: auto;
-    margin-right: auto;
-    }
 }
 
 button,
@@ -40,17 +46,29 @@ label {
 
 button {
     padding: 5px 5px;
-    border: 1px solid black;
+    background-color: rgba(12,85,58,0.5);
+    border: 1px solid #0c553a;
+    height: 50px;
+    width: 150px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+}
+#btn-make {
+    display: block;
 }
 
-button {
-    display: block;
-    margin-top: 25px;
-}
 
 .dark-containment {
-    border: 1px solid darkgrey;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(11,51,63,0.5);
+}
+
+h1,
+.intro-words,
+button {
+    text-align: center;
 }
 
 
