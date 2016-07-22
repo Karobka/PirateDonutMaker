@@ -1,3 +1,87 @@
-body {
-    
+* {
+    box-sizing: border-box;
+	font-family: 'Karla', sans-serif;
+    color: #dedede;
 }
+
+body {
+    background-color: #072c38;
+    background-image: url("../images/ocean.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+/** set form to not display at first **/
+.prefs-form {
+    display: none;
+}
+
+/** REMEMBER MOBILE FIRST  **/
+
+.containment {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 600px) {
+    html {
+        height: 100%;
+    }
+    body {
+        /** backup background color if gradient isn't supported**/
+        background-color: #092c44;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        background: linear-gradient(#257fa6, #092c44);
+
+    }
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+button {
+    padding: 5px 5px;
+    background-color: rgba(12,85,58,0.5);
+    border: 1px solid #0f6948;
+    height: 50px;
+    width: 150px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+}
+#btn-make {
+    display: block;
+}
+
+
+.dark-containment {
+    background-color: rgba(11,51,63,0.5);
+}
+
+h1,
+.intro-words,
+button {
+    text-align: center;
+}
+
+.prefs-form {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.donut-result {
+    display: none;
+    background-color: rgba(12,85,58,0.5);
+    border: 1px solid #0c553a;
+    text-align: center;
+}
+
+
