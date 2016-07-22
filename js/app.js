@@ -118,8 +118,12 @@ $(document).ready(function() {
 		}
 		return personalizedPirateDonut;
 	};
-
-
+	//reset the form on clicking play again button
+	$("#btn-replay").on('click', function() {
+		$(".prefs-form")[0].reset();
+		$(".prefs-form").show();
+		$(".donut-result").hide();
+	});
 
 
 });
